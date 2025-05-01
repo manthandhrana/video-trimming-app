@@ -1,5 +1,5 @@
 import dotenv from 'dotenv';
-import app from "./app.js";
+import { app } from './app.js'; // Import the named export 'app'
 
 dotenv.config();
 
