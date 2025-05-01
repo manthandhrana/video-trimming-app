@@ -7,8 +7,8 @@ const ffmpegPath = process.env.FFMPEG_PATH
 const ffProbe = process.env.FFPROBE_PATH
 
 // Set the paths to ffmpeg and ffprobe if they are in a custom location
-ffmpeg.setFfmpegPath(ffmpegPath);
-ffmpeg.setFfprobePath(ffProbe);
+ffmpeg.setFfmpegPath(ffmpegPath|| 'ffmpeg');
+ffmpeg.setFfprobePath(ffProbe|| 'ffprobe');
 
 export const trimVideoUrl = (inputPath, start, end, outputPath) => {
   return new Promise((resolve, reject) => {
